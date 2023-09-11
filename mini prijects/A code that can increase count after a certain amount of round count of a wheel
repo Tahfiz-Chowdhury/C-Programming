@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdbool.h>
+int main()
+{
+  int Total_Wheel_Round;
+  int counting=0, i, j;
+  bool counter_flag = true;
+  
+  while (1)
+  {
+    for ( i = 0; i < 120; i++)
+    {
+    Total_Wheel_Round = i+1;
+    printf("Total Round: %d",Total_Wheel_Round);
+    
+     if (Total_Wheel_Round >= 100 && counter_flag == true)
+      {
+      counting = counting+1;
+      counter_flag = false;
+      }
+      
+      printf("\t\tCounter: %d\n",counting);
+      
+      if (Total_Wheel_Round < 100)
+      {
+        counter_flag = true;
+      }  
+    }
+  }  
+  return 0;
+}
